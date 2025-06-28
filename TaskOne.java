@@ -1,32 +1,30 @@
-/** Task One => BMI calculation */
+/** Task 1=> Check largest number using Array in Java Programming */
 
 import java.util.Scanner;
 
 public class TaskOne{
 	public static void main(String args[]){
 		Scanner inp=new Scanner(System.in);
-		//Display the Heading
-		System.out.println("\t\t\t\t\tBMI");
-		
-		//Get input from user
-		System.out.println("Enter your Weight: ");
-		int w=inp.nextInt();
-	
-		System.out.println("Enter your Height: ");
-		int h=inp.nextInt();
 
-		//Calculation of BMI 
-		int bmi=w/((h/100)^2);
+		System.out.println("Enter the How many numbers you get: ");
+		int p=inp.nextInt();
 		
-		//Check and give your body health related
-		if(bmi<18.5){
-			System.out.println(bmi+" your weight is under weight");
-		}else if(18.5<24.5){
-			System.out.println(bmi+" your weight is NORMAL");
-		}else if(24.5<27.5){
-			System.out.println(bmi+" your weight is Over Weight");
-		}else{
-			System.out.println(bmi+" your weight is obesity");
+		int a[]=new int[p];
+
+		for(int i=0;i<p;i++){
+			System.out.println("Enter the element no ["+i+"] : ");
+			a[i]=inp.nextInt();
 		}
+
+		int max=a[0];
+		
+		for(int i=1;i<a.length;i++){
+			if(a[i]>max){
+				max=a[i];
+			}
+		}
+		System.out.println("Largest number is : "+max);
+		inp.close();
+		
 	}
 }
