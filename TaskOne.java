@@ -1,30 +1,27 @@
-/** Task 1=> Check largest number using Array in Java Programming */
+/** ForLoop using java */
 
 import java.util.Scanner;
 
 public class TaskOne{
 	public static void main(String args[]){
 		Scanner inp=new Scanner(System.in);
-
-		System.out.println("Enter the How many numbers you get: ");
-		int p=inp.nextInt();
+		System.out.println("Enter the start point of year: ");
+		int start=inp.nextInt();
+		System.out.println("Enter the End point of year: ");
+		int end=inp.nextInt();
 		
-		int a[]=new int[p];
-
-		for(int i=0;i<p;i++){
-			System.out.println("Enter the element no ["+i+"] : ");
-			a[i]=inp.nextInt();
-		}
-
-		int max=a[0];
-		
-		for(int i=1;i<a.length;i++){
-			if(a[i]>max){
-				max=a[i];
+		System.out.println("\n\nIt is a leap year");
+		for(int i=start;i<=end;i++){
+			if(i%4==0){
+				System.out.println(i);
 			}
 		}
-		System.out.println("Largest number is : "+max);
-		inp.close();
-		
+		System.out.println("\n\nIt is a not leap year");
+		for(int i=start;i<=end;i++){
+			if(i%4!=0){
+				System.out.println(i);
+			}
+		}
+
 	}
 }
